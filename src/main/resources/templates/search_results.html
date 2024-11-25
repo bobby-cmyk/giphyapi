@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <p>
+        <code>Go back home <a href="/">here</a></code>
+    </p>
+
+    <br>
+
+    <p>
+        <b>Search results for: </b>
+        <code><span data-th-text="${query}"></span></code>
+    </p>
+    <p>
+        <b>Number of serach results: </b>
+        <code><span data-th-text="${limit}"></span></code>
+    </p>
+
+    <hr>
+
+    <span data-th-each="imageUrl : ${imagesUrl}">
+        <img data-th-src="${imageUrl}">
+    </span>
+
+</body>
+</html>
